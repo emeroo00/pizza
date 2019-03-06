@@ -7,13 +7,27 @@
   </head>
   <body>
     <h><img src="http://66.media.tumblr.com/6854ae546fc61a0f2fefb8244a8340aa/tumblr_nmygzzqVs11qbmm1co1_500.gif" alt="PIZZA!" width="200" height="200"></h>
-    <h1>Vilken pizza vill du ha?</h1>
+    <h1 class="title">Vilken pizza vill du ha?</h1>
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Skriv olika pizzor..."></input>
       </div>
       <button class="addOption">Lägg till</button>
     </div>
-    <button>Kör!</button>
+    <div class="resultSection"></div>
+    <button class="Go">Kör!</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+
+        $('.addOption').click (add_option)
+      })
+    </script>
   </body>
 </html>
